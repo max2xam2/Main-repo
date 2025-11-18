@@ -1,4 +1,4 @@
-package HW.HW2.aggregation_composition;
+package information.block_second.composition_agragation;
 
 
 

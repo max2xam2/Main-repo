@@ -1,8 +1,8 @@
-package HW.HW2.aggregation_composition;
+package HW.HW2.aggregation_composition.Task1;
 
 /*Это является композицией, а не агрегацией потому что мы создаем объект Engine внутри Car, а не передаем его туда.
-* Если мы удаляем объект Car, то и удаляется сразу же наш Engine, так как он был создан внутри Car. То есть
-* часть без целого жить не может.*/
+ * Если мы удаляем объект Car, то и удаляется сразу же наш Engine, так как он был создан внутри Car. То есть
+ * часть без целого жить не может.*/
 
 class Engine{
   private String name;
@@ -34,7 +34,7 @@ class Car {
 
 }
 
-public class Task1 {
+public class Main {
   public static void main(String[] args){
     Car carFirst = new Car("mercedes", "gls");
     System.out.println(carFirst.getBrand());

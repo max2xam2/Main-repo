@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    User userFirst = new User("Maks", 23);
+    User userFirst = new User("Maks");
+
     System.out.println(User.getCountCreatedUsers());
 
-    User userSecond = new User("Igorek", 87);
+    User userSecond = new User("Igorek");
     System.out.println(User.getCountCreatedUsers());
 
   }

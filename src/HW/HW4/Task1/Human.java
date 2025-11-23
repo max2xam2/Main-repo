@@ -18,7 +18,7 @@ public class Human {
         this.age = age;
       }
       } catch(InvalidAgeException e) {
-        System.out.println("Такой возраст вводить нельзя");
+        System.out.println(e.getMessage());
       }
   }
 

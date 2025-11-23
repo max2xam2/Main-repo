@@ -4,7 +4,6 @@ public class Main {
 
   enum AccessLevel{
     GUEST,USER,ADMIN,SUPER_ADMIN;
-
   }
 
   static class User{
@@ -15,7 +14,7 @@ public class Main {
     }
 
     public boolean canAccess(User user){
-      switch(this.accessLevel){
+      switch(user.accessLevel){
         case USER, GUEST:
           return false;
         case SUPER_ADMIN, ADMIN:
@@ -31,6 +30,5 @@ public class Main {
     User userSecond = new User(AccessLevel.ADMIN);
     System.out.println(user.canAccess(userSecond)); //Ничего не понял, создаем две переменные, чтобы проверить
     // одну через другую
-
   }
 }

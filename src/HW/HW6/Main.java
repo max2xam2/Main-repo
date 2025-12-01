@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
-class  Storage <T> {
+class Storage <T> {
   ArrayList<T> itemStorage;
 
   public Storage(Collection<T> itemStorage) {

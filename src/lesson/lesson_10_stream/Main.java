@@ -22,7 +22,7 @@ public class Main {
     System.out.println(streamInt.sum());
 
     Arrays.stream(mas)
-            .boxed()      //из примитивово делает ссылки
+            .boxed()      //из примитивов делает ссылки
             .toList();
   }
 }

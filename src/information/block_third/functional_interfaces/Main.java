@@ -81,7 +81,7 @@ public class Main {
     //Consumer<String> safe = (maybePrint != null) ? maybePrint : Consumer.identity();
     //safe.andThen(System.out::println).accept("Hello"); // работает
     /*Создаем переменную maybePrint типа Consumer, но пока равную null, но при вызове andThen пробросится ошибка NPE.
-     * Во втором случае использования identity, мы провеярем с помощью тернарного оператора maybePrint != null, если
+     * Во втором случае использования identity, мы проверяем с помощью тернарного оператора maybePrint != null, если
      * != null, то используем его, а иначе ничего не делаем и благодаря этому safe не будет равным null,
      * */
 
@@ -90,10 +90,10 @@ public class Main {
      * то есть объект создается только во время вызова, также просто задавать дефолтное значение.
      * Может возвращать null, но NPE пробросится если мы будем использовать этот результат, потому что не можем
      * вызывать методы у null. Нужно проверять значение или использовать Optional. Также существует несколько видов
-     * Supplier для работы с примитивными данными, время работы быстрее, потому что не происходит распоковки и
+     * Supplier для работы с примитивными данными, время работы быстрее, потому что не происходит распаковки и
      * автоупаковки, а работаем напрямую, более чистый код. IntSupplier, DoubleSupplier, LongSupplier, BooleanSuppleir.
      * Supplier + Optional - выполняем действие, когда есть значение.
-     * Аналогичо существуют специализации для работы с примитивами, IntSupplier int() -> int,
+     * Аналогично существуют специализации для работы с примитивами, IntSupplier int() -> int,
      * LongSupplier long() -> long, DoubleSupplier double() -> double
      */
 
@@ -202,5 +202,9 @@ public class Main {
     Function<String, String> addString = forConcat::concat;
     String newString = addString.apply(" Hello");
     System.out.println(newString);
+
+
+
+
   }
 }

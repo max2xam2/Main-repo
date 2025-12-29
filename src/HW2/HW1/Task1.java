@@ -10,7 +10,7 @@ public class Task1 {
     String maxWord = "";
     int maxKey = -1;
 
-    for(int i = 0; i < count; i++){
+    for(int i = 0; i < count; i++) {
       listString.add(input.next());
     }
 

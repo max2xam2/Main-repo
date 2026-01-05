@@ -2,6 +2,7 @@ package HW2.HW2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -60,6 +61,8 @@ public class Task {
     }
 
     //7
+    List<Person> personList2 = new ArrayList<>(List.of(person1,person2,person3,person4,person5));
+    Map<Integer, List<Person>> newMapAge7 = personList2.stream().collect(Collectors.groupingBy(Person::getAge));
 
     //8
     List<String> newListString8 = new ArrayList<>(List.of("sjhdf","jsdhfgjsk","134","12312sdsg"));
@@ -71,8 +74,5 @@ public class Task {
     Stream<String> stream9 = newListString9.stream();
     String stringResult = stream9.collect(Collectors.joining(", "));
     System.out.println(stringResult);
-
-
-
   }
 }

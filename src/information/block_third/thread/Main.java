@@ -160,7 +160,6 @@ for (int i = 0; i < 100; i++) {
 * плюс TimeoutException - если задача не была завершена за указанное время.
 * Пример работы Future c Callable
 * import java.util.concurrent.*;
-
   public class FutureExample {
       public static void main(String[] args) {
           // 1. Создаем ExecutorService с одним потоком
@@ -287,7 +286,7 @@ for (int i = 0; i < 100; i++) {
 *
 * CompletableFuture - класс, предоставляющий возможности для асинхронного программирования. Он поддерживает выполнение
 * задач в фоновом режиме, цепочки задач, обработчик ошибок. Под асинхронным программированием в данном случае
-* понимаем подход при котором задача запускается и выполняется в будушем, а текущий поток не блокируется.
+* понимаем подход при котором задача запускается и выполняется в будущем, а текущий поток не блокируется.
 * Текущий поток продолжает работать над своей задачей, а наша задача выполняется другим потоком, и когда у нас
 * появляется результат мы уже знаем, что будем делать с ним. CompletableFuture может работать с любой логикой,
 * вычислительные задачи, чтение файлов и многое другое. В отличие от обычного Future при работе с CompletableFuture
@@ -603,17 +602,26 @@ for (int i = 0; i < 100; i++) {
 *
 * 5)Atomic -
 * AtomicBoolean, AtomicInteger, AtomicLong, AtomicReferance<T> - одиночные
-* Atomic
+* AtomicArrayInt
+*
 * 6)wait()/notify()/notifyAll() -
 * 7)
-
+* ForkJoinPool -
+*
+* Happens-before, , Executors,ThreadPoolExecutor, ExecutorService дописать + задачи,
+* Потокобезопасные коллекции -
+* Вопросы на завтра
+* 2)ThreadPoolExecutor/Executors
+* 3)Проверить хорошо ли я разобрался с Lock, странная штука
+* 4)
 *
 *
-* Happens-before, ForkJoinPool, Executors,ThreadPoolExecutor, ExecutorService дописать + задачи,
-* Потокобезопасные коллекции - узнать какие нужны и чаще всего применяются
-* */
+* Docker, SQL
+*
+*/
 
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 
 public class Main {

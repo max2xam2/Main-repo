@@ -613,7 +613,6 @@ for (int i = 0; i < 100; i++) {
 * Вопросы на завтра
 * 2)ThreadPoolExecutor/Executors
 * 3)Проверить хорошо ли я разобрался с Lock, странная штука
-* 4)
 *
 *
 * Docker, SQL

@@ -745,8 +745,6 @@ for (int i = 0; i < 100; i++) {
 * применимы все методы, но они применимы для элементов по индексу, и также все методы применимы для работы с полями
 * объектов.
 *
-* ForkJoinPool -
-*
 * Happens-before - правило при разработке многопоточного приложения, определяющее видимость изменений между потоками.
 * Отношение happens-before гарантирует, что если операция A happens-before операции B, то результаты работы A будут
 * видны B, также здесь выполняется правило транзитивности, если A happens-before B и B happens-before C, то
@@ -762,16 +760,17 @@ for (int i = 0; i < 100; i++) {
 * Lock также обеспечивает Happens-before отношение.
 * 4)Также сюда можем отнести потокобезопасные коллекции, потому что их методы используют механизмы синхронизации
 * (volatile, synchronized, Lock и тд)
-* Потокобезопасные коллекции -
 */
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 
 public class Main {
   public static void main(String[] args) throws InterruptedException, ExecutionException {
-
-
+    List<String> list1 = new ArrayList<>();
   }
 }
